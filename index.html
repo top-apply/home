@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kids Puzzle – Free 3D Puzzle Games for Kids</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    .home-anim{position:fixed;inset:0;z-index:-1;background:var(--bg)}
+    .home-anim canvas{width:100%;height:100%}
+  </style>
+</head><body>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html" aria-label="Kids Puzzle home">
+      <img src="assets/logo.svg" alt="Kids Puzzle logo">
+    </a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <nav class="nav" aria-label="Primary" aria-expanded="false">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="games/index.html">Games</a></li>
+        <li><a href="stats.html">Stats</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<section class="hero">
+  <div class="wrap">
+    <h1>Can We Build It? Yes, We Can!</h1>
+    <p class="sub">Engaging puzzle games that help build critical thinking skills, one block at a time.</p>
+    <a class="cta" href="games/index.html">Start Building</a>
+  </div>
+</section>
+<div class="home-anim"><canvas id="homebg"></canvas></div>
+
+<main class="wrap">
+
+  <section class="section" id="popular">
+    <div class="panel">
+      <h2 class="h2">Popular Projects</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="https://i.imgur.com/gB21I0d.gif" alt="Snake">
+          <div class="body">
+            <div class="row"><strong>Snake</strong><span class="badge">Popular</span></div>
+            <a class="cta" href="games/snake.html" style="margin-top:.5rem;display:inline-block;">Play Now</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://i.imgur.com/u1aY32s.gif" alt="Brick Breaker">
+          <div class="body">
+            <div class="row"><strong>Brick Breaker</strong><span class="badge">Popular</span></div>
+            <a class="cta" href="games/breakout.html" style="margin-top:.5rem;display:inline-block;">Play Now</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="featured-project">
+    <div class="panel">
+      <h2 class="h2">Featured Project of the Week</h2>
+      <div class="grid" style="align-items: center; margin-top: 1.5rem;">
+        <article>
+          <h3 class="h3" style="font-size: 1.4rem;">Brick Breaker</h3>
+          <p class="small">This week, we're featuring a timeless classic! Brick Breaker challenges your reflexes and precision. Clear all the bricks to win, but don't let the ball drop! It's a perfect game for quick sessions and chasing high scores.</p>
+          <ul style="padding-left: 20px; color: var(--muted); font-size: .95rem; margin-bottom: 1.5rem;">
+            <li>Classic arcade action</li>
+            <li>Simple, addictive gameplay</li>
+            <li>Great for all ages</li>
+          </ul>
+          <a class="cta" href="games/breakout.html">Play Brick Breaker</a>
+        </article>
+        <aside>
+          <img src="https://i.imgur.com/u1aY32s.gif" alt="Brick Breaker Gameplay" style="width: 100%; border-radius: 12px; border: 1px solid var(--border);">
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="regional-games">
+    <div class="panel">
+      <h2 class="h2">Top Games by Region & Age</h2>
+      <p>A selection of games popular with different age groups in regions around the world.</p>
+      <div class="grid" style="margin-top:1.5rem; gap: 2rem;">
+        <div>
+          <h4>Germany & Canada (Ages 5-8)</h4>
+          <p class="small">Focus on foundational skills like memory and pattern recognition.</p>
+          <ul>
+            <li><a href="games/memory.html">Memory Match</a></li>
+            <li><a href="games/snake.html">Snake</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Australia & New Zealand (Ages 9-12)</h4>
+          <p class="small">Challenges that involve strategy, logic, and quick thinking.</p>
+          <ul>
+            <li><a href="games/breakout.html">Brick Breaker</a></li>
+            <li><a href="games/2048.html">2048 Mini</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="why">
+    <div class="grid">
+      <article class="panel">
+        <h2 class="h2">Why Our Workshop?</h2>
+        <p>Looking for a safe, fun, and educational space for your kids to play? Our workshop was built to challenge young minds with exciting puzzles and brain-teasers. We offer pure, classic fun that's always free and respects your privacy. Your <strong>best scores are saved locally</strong> on your device, meaning you—and only you—are in control of your data.</p>
+        <ul>
+          <li>🧠 Boosts spatial reasoning & problem-solving</li>
+          <li>🎮 Kid-friendly games, instant play in your browser</li>
+          <li>💾 Private high scores saved on your device</li>
+          <li>🛡️ A privacy-first platform by design</li>
+        </ul>
+        <a class="cta" href="games/index.html">Browse All Projects</a>
+      </article>
+      <aside class="panel">
+        <h3 class="h3">Leaderboard Preview (Local)</h3>
+        <div id="miniBoard" class="small"></div>
+        <button class="cta ghost" id="clearMini" style="margin-top:8px;">Clear Local Scores</button>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div class="panel">
+      <h2 class="h2">Features</h2>
+      <div class="cards">
+        <article class="card"><img src="https://onlinegiftools.com/images/examples-onlinegiftools/drop-of-liquid-slowdown-the-middle.gif" alt="Performance"><div class="body"><strong>Learning Through Play</strong><p class="small">Our games are designed to be fun and educational. They help develop spatial awareness, logic, and 3D thinking skills in an engaging way.</p></div></article>
+        <article class="card"><img src="https://cdn.dribbble.com/userupload/35415584/file/original-dda9f85d8ef606b6e335797ce8b8f6bf.gif" alt="Privacy by Design"><div class="body"><strong>Safe & Private</strong><p class="small">We don't need your data. High scores are stored using your browser's LocalStorage, keeping them private to your child. We use minimal, anonymous analytics to improve the site, never to track users.</p></div></article>
+        <article class="card"><img src="https://i.pinimg.com/originals/2a/f0/0b/2af00b77b9831ccf199a7360d8d4d39f.gif" alt="Responsive"><div class="body"><strong>Play Anywhere</strong><p class="small">Whether on a tablet, laptop, or desktop computer, our responsive design ensures a great gaming experience on any screen size.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="testimonials">
+    <div class="grid">
+      <div class="panel">
+        <h2 class="h2">Parents & Kids Say</h2>
+        <blockquote>“My daughter loves the 3D puzzles! It's great to see her thinking and solving problems.” — <em>Sarah P.</em></blockquote>
+        <blockquote>“PuzzleVerse is my go-to for screen time I can feel good about. The games are challenging and fun.” — <em>David L.</em></blockquote>
+        <blockquote>“I like trying to beat my own high score. The block game is my favorite!” — <em>Leo, Age 8</em></blockquote>
+      </div>
+      <div class="panel">
+        <h2 class="h2">FAQ</h2>
+        <p><strong>Do I need an account?</strong><br>No. Just open a game and start playing instantly.</p>
+        <p><strong>Where are my scores saved?</strong><br>Scores are stored locally in your browser's <code>LocalStorage</code>. This means your data stays on your device. You can clear your scores anytime from the "All Games" or "Stats" pages.</p>
+        <p><strong>Is it really free?</strong><br>Yes, 100% free. We are a passion project dedicated to providing quality educational entertainment without cost.</p>
+        <p><strong>Can you add [X] game?</strong><br>We're always open to suggestions! Use our contact form to recommend a puzzle game you'd love to see on PuzzleVerse. We focus on games that are lightweight and work well on the web.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="cta">
+    <div class="panel" style="text-align:center">
+      <h2 class="h2">Let's Get Building!</h2>
+      <p class="small">Ready to challenge your mind and build a new high score?</p>
+      <a class="cta" href="games/index.html">Play Free Games</a>
+    </div>
+  </section>
+
+</main>
+
+
+<footer class="footer">
+  <div class="wrap cols" style="align-items:flex-start">
+    <div style="min-width:220px">
+      <div class="small"><strong class="brand-name">Kids Puzzle</strong><br>Play free 3D puzzle games. Scores saved locally on your device.</div>
+      <div class="small" style="margin-top:6px;">© <span id="year">2025</span> <span class="brand-name">Kids Puzzle</span>. All rights reserved.</div>
+    </div>
+    <div>
+      <div class="small"><strong>Platform</strong></div>
+      <ul style="list-style:none;padding:0;margin:.4rem 0 0 0;display:grid;gap:6px">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="games/index.html">Games</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="small"><strong>Legal</strong></div>
+      <ul style="list-style:none;padding:0;margin:.4rem 0 0 0;display:grid;gap:6px">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms & Conditions</a></li>
+        <li><a href="dmca.html">DMCA</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="script.js" type="module"></script>
+<script src="privacy-popup.js" defer></script>
+
+
+<script>
+// HOME creative: Floating Blocks background
+const homeCanvas = document.getElementById('homebg');
+if (homeCanvas) {
+    const ctx = homeCanvas.getContext('2d');
+    let W, H;
+    const shapes = [];
+    const colors = ['#3b82f6', '#f59e0b', '#ef4444', '#22c55e'];
+
+    function resize() {
+        homeCanvas.width = innerWidth;
+        homeCanvas.height = innerHeight;
+        W = homeCanvas.width;
+        H = homeCanvas.height;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    for (let i = 0; i < 40; i++) {
+        shapes.push({
+            x: Math.random() * W,
+            y: Math.random() * H,
+            s: 20 + Math.random() * 40, // size
+            vx: (Math.random() - 0.5) * 0.3,
+            vy: (Math.random() - 0.5) * 0.3,
+            rot: Math.random() * Math.PI,
+            vRot: (Math.random() - 0.5) * 0.005,
+            type: Math.floor(Math.random() * 3), // 0: square, 1: circle, 2: triangle
+            color: colors[Math.floor(Math.random() * colors.length)]
+        });
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, W, H);
+        shapes.forEach(s => {
+            s.x += s.vx; s.y += s.vy; s.rot += s.vRot;
+            if (s.x < -s.s || s.x > W + s.s) s.vx *= -1;
+            if (s.y < -s.s || s.y > H + s.s) s.vy *= -1;
+
+            ctx.save();
+            ctx.translate(s.x, s.y);
+            ctx.rotate(s.rot);
+            ctx.fillStyle = s.color;
+            ctx.globalAlpha = 0.6;
+
+            if (s.type === 0) ctx.fillRect(-s.s / 2, -s.s / 2, s.s, s.s);
+            else if (s.type === 1) { ctx.beginPath(); ctx.arc(0, 0, s.s / 2, 0, Math.PI * 2); ctx.fill(); }
+            else { ctx.beginPath(); ctx.moveTo(0, -s.s / 2); ctx.lineTo(s.s / 2, s.s / 2); ctx.lineTo(-s.s / 2, s.s / 2); ctx.closePath(); ctx.fill(); }
+            ctx.restore();
+        });
+        requestAnimationFrame(draw);
+    }
+    draw();
+}
+
+// Animate GIFs on hover for cards and featured image
+document.querySelectorAll('.card, #featured-project aside').forEach(el => {
+  const img = el.querySelector('img');
+  if (!img) return;
+
+  const staticSrc = img.src;
+  const gifSrc = img.dataset.gif;
+
+  el.addEventListener('mouseenter', () => {
+    if (gifSrc) img.src = gifSrc;
+  });
+  el.addEventListener('mouseleave', () => {
+    img.src = staticSrc;
+  });
+});
+</script>
+</body></html>
